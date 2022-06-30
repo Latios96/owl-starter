@@ -22,7 +22,10 @@ mkdir build
 cd build
 cmake -DCMAKE_BUILD_TYPE=Release "-DOptiX_ROOT_DIR=C:\ProgramData\NVIDIA Corporation\OptiX SDK 7.4.0" ..
 ```
-If this succeeds, you can open the generated Visual Studio project in Visual Studio. You can also use another IDE like Clion, just make sure to pass the `OptiX_ROOT_DIR` in the Cmake options.
+If this succeeds, you can open the generated Visual Studio project in Visual Studio. You can also use another IDE like Clion. If you are using Clion, pass this to the CMake options: 
+```
+-G "Visual Studio 16 2019" "-DOptiX_ROOT_DIR=C:\ProgramData\NVIDIA Corporation\OptiX SDK 7.4.0"
+```
 
 If you prefer to build on the command line, use this command: (As far as I tested, this works only with the Visual Studio generator, not with ninja)
 ```
